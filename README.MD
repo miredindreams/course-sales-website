@@ -1,0 +1,1 @@
+This project, "CodeMaster Online Programming School", was created as an example of UI/UX interface design and frontend development.
