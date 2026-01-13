@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статья | CodeMaster Блог</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="article.css">
+</head>
+<body>
+    <!-- Анимированный фон с эффектом "паутины" -->
+    <canvas id="webCanvas"></canvas>
+    <div class="blur-overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code logo-icon"></i>
+                CodeMaster
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Курсы</a>
+                <a href="teachers.html" class="nav-link">Преподаватели</a>
+                <a href="companies.html" class="nav-link">Компаниям</a>
+                <a href="blog.html" class="nav-link active">Блог</a>
+                <a href="#" class="nav-link">Карьера</a>
+            </nav>
+            
+            <div class="auth-buttons">
+                <button class="btn btn-secondary btn-sm">Войти</button>
+                <button class="btn btn-primary btn-sm">Начать учиться</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Контент статьи -->
+    <main class="article-container">
+        <article class="article-content" id="articleContent">
+            <!-- Контент будет загружаться через JavaScript -->
+            <div class="article-loading">
+                <div class="loader"></div>
+                <p>Загрузка статьи...</p>
+            </div>
+        </article>
+        
+        <!-- Сайдбар статьи -->
+        <aside class="article-sidebar">
+            <!-- Навигация по статье -->
+            <div class="sidebar-widget table-of-contents">
+                <h3 class="widget-title">Содержание</h3>
+                <nav class="toc-nav" id="tableOfContents">
+                    <!-- Будет заполняться через JavaScript -->
+                </nav>
+            </div>
+            
+            <!-- Информация об авторе -->
+            <div class="sidebar-widget author-info-widget" id="authorInfo">
+                <!-- Будет заполняться через JavaScript -->
+            </div>
+            
+            <!-- Поделиться -->
+            <div class="sidebar-widget share-widget">
+                <h3 class="widget-title">Поделиться</h3>
+                <div class="share-buttons">
+                    <button class="share-btn vk">
+                        <i class="fab fa-vk"></i>
+                    </button>
+                    <button class="share-btn telegram">
+                        <i class="fab fa-telegram"></i>
+                    </button>
+                    <button class="share-btn twitter">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button class="share-btn copy">
+                        <i class="fas fa-link"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Рекомендованные статьи -->
+            <div class="sidebar-widget recommended-widget">
+                <h3 class="widget-title">Читайте также</h3>
+                <div class="recommended-articles" id="recommendedArticles">
+                    <!-- Будет заполняться через JavaScript -->
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Комментарии -->
+    <section class="section comments-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="commentsCount">Комментарии (0)</h2>
+                <button class="btn btn-outline" id="addCommentBtn">
+                    <i class="fas fa-plus"></i> Добавить комментарий
+                </button>
+            </div>
+            
+            <!-- Форма комментария -->
+            <div class="comment-form-container" id="commentForm">
+                <div class="comment-form-header">
+                    <h3>Оставить комментарий</h3>
+                    <p>Поделитесь своим мнением или задайте вопрос</p>
+                </div>
+                <form id="newCommentForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="commentName" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="commentEmail" placeholder="Ваш email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="commentText" placeholder="Ваш комментарий..." rows="4" required></textarea>
+                    </div>
+                    <div class="form-footer">
+                        <div class="form-agreement">
+                            <input type="checkbox" id="commentAgreement" required>
+                            <label for="commentAgreement">
+                                Согласен на обработку персональных данных
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Отправить комментарий
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Список комментариев -->
+            <div class="comments-list" id="commentsList">
+                <!-- Комментарии будут добавляться через JavaScript -->
+                <div class="no-comments">
+                    <i class="far fa-comments"></i>
+                    <p>Пока нет комментариев. Будьте первым!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-title">CodeMaster</h3>
+                    <p class="footer-description">Платформа для обучения программированию с нуля до профессионального уровня.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Направления</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Frontend-разработка</a></li>
+                        <li><a href="#">Backend-разработка</a></li>
+                        <li><a href="#">Мобильная разработка</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">DevOps</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Компания</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Курсы</a></li>
+                        <li><a href="teachers.html">Преподаватели</a></li>
+                        <li><a href="companies.html">Компаниям</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Поддержка</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Помощь студенту</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Документы</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 CodeMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="particles.js"></script>
+    <script src="article.js"></script>
+</body>
+</html>

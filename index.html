@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMaster | Платформа курсов по программированию</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Анимированный фон с эффектом "паутины" -->
+    <canvas id="webCanvas"></canvas>
+    <div class="blur-overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-code logo-icon"></i>
+                CodeMaster
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#" class="nav-link active">Курсы</a>
+                <a href="teachers.html" class="nav-link">Преподаватели</a>
+                <a href="companies.html" class="nav-link">Компаниям</a>
+                <a href="blog.html" class="nav-link">Блог</a>
+                <a href="#" class="nav-link">Карьера</a>
+            </nav>
+            
+            <div class="auth-buttons">
+                <button class="btn btn-secondary btn-sm">Войти</button>
+                <button class="btn btn-primary btn-sm">Начать учиться</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content animate-in">
+            <h1 class="hero-title">Стань востребованным программистом с нуля</h1>
+            <p class="hero-subtitle">Практические курсы по программированию с поддержкой менторов и гарантией трудоустройства. Освойте профессию будущего в удобном формате.</p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Выбрать курс</button>
+                <button class="btn btn-secondary">Бесплатные уроки</button>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">15000+</span>
+                    <span class="stat-label">выпускников</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">94%</span>
+                    <span class="stat-label">трудоустраиваются</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">250+</span>
+                    <span class="stat-label">преподавателей</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">4.9</span>
+                    <span class="stat-label">средний рейтинг</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Популярные курсы</h2>
+                    <p class="section-subtitle">Выберите направление и начните карьеру в IT</p>
+                </div>
+                <a href="#" class="btn btn-outline">Все курсы <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <!-- Фильтры -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="data">Data Science</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="devops">DevOps</button>
+            </div>
+            
+            <!-- Прогресс обучения -->
+            <div class="progress-container">
+                <div class="progress-header">
+                    <h3>Ваш прогресс обучения</h3>
+                    <span>65% завершено</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 65%"></div>
+                </div>
+                <div class="progress-text">Продолжайте в том же духе! Осталось 35% до завершения курса</div>
+            </div>
+            
+            <!-- Сетка курсов -->
+            <div class="grid grid-4" id="courses-grid">
+                <!-- Курсы будут добавляться через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Частые вопросы</h2>
+                    <p class="section-subtitle">Мы ответили на самые популярные вопросы студентов</p>
+                </div>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Какой график обучения на курсах?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Вы можете учиться в удобном для вас темпе. Все уроки доступны 24/7, а практические задания можно выполнять в любое время. Менторы доступны для консультаций в рабочие часы.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Есть ли гарантия трудоустройства?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, мы предоставляем гарантию трудоустройства для всех, кто успешно завершил курс и выполнил все проекты. Наш карьерный центр помогает с составлением резюме, подготовкой к собеседованиям и подбором вакансий.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Можно ли оплачивать курс в рассрочку?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, мы предлагаем беспроцентную рассрочку на все курсы. Вы можете разделить оплату на 6, 12 или 18 месяцев. Первый платеж — только через месяц после начала обучения.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-title">CodeMaster</h3>
+                    <p class="footer-description">Платформа для обучения программированию с нуля до профессионального уровня.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Направления</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Frontend-разработка</a></li>
+                        <li><a href="#">Backend-разработка</a></li>
+                        <li><a href="#">Мобильная разработка</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">DevOps</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Компания</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Преподаватели</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Поддержка</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Помощь студенту</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Документы</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 CodeMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно курса -->
+    <div class="modal-overlay" id="courseModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalCourseTitle">Название курса</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalCourseContent">
+                <!-- Контент будет заполняться через JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка "Наверх" -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="particles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

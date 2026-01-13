@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компаниям | CodeMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="companies.css">
+</head>
+<body>
+    <!-- Анимированный фон с эффектом "паутины" -->
+    <canvas id="webCanvas"></canvas>
+    <div class="blur-overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code logo-icon"></i>
+                CodeMaster
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Курсы</a>
+                <a href="teachers.html" class="nav-link">Преподаватели</a>
+                <a href="companies.html" class="nav-link active">Компаниям</a>
+                <a href="#" class="nav-link">Блог</a>
+                <a href="#" class="nav-link">Карьера</a>
+            </nav>
+            
+            <div class="auth-buttons">
+                <button class="btn btn-secondary btn-sm">Войти</button>
+                <button class="btn btn-primary btn-sm">Начать учиться</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section для компаний -->
+    <section class="companies-hero">
+        <div class="container hero-content animate-in">
+            <h1 class="hero-title">Обучение программированию для компаний</h1>
+            <p class="hero-subtitle">Повышайте квалификацию команды, внедряйте лучшие практики и готовьте кадры под свои задачи</p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-lg">Обсудить проект</button>
+                <button class="btn btn-secondary btn-lg">Смотреть кейсы</button>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">150+</span>
+                    <span class="stat-label">компаний-партнеров</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">5 000+</span>
+                    <span class="stat-label">обученных сотрудников</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">96%</span>
+                    <span class="stat-label">удовлетворенность</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">40%</span>
+                    <span class="stat-label">рост производительности</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Решения для компаний -->
+    <section class="section solutions-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Корпоративные решения</h2>
+                    <p class="section-subtitle">Готовые программы и индивидуальные подходы для вашего бизнеса</p>
+                </div>
+            </div>
+            
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Обучение команд</h3>
+                    <p>Повышение квалификации существующих разработчиков по актуальным технологиям</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Групповые занятия</li>
+                        <li><i class="fas fa-check"></i> Гибкое расписание</li>
+                        <li><i class="fas fa-check"></i> Индивидуальная программа</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Подготовка junior-разработчиков</h3>
+                    <p>Набор и обучение новичков под задачи вашей компании с гарантией трудоустройства</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Отбор кандидатов</li>
+                        <li><i class="fas fa-check"></i> Обучение с нуля</li>
+                        <li><i class="fas fa-check"></i> Стажировка в компании</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Внедрение технологий</h3>
+                    <p>Обучение работе с новыми технологиями и фреймворками, которые вы планируете использовать</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> React/Node.js/.NET</li>
+                        <li><i class="fas fa-check"></i> DevOps практики</li>
+                        <li><i class="fas fa-check"></i> Архитектурные подходы</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Аналитика компетенций</h3>
+                    <p>Оценка текущего уровня команды и построение индивидуальных траекторий развития</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Тестирование навыков</li>
+                        <li><i class="fas fa-check"></i> Roadmap развития</li>
+                        <li><i class="fas fa-check"></i> Регулярные отчеты</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Процесс работы -->
+    <section class="section process-section dark-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Как мы работаем с компаниями</h2>
+                    <p class="section-subtitle">Прозрачный процесс от первой консультации до результатов</p>
+                </div>
+            </div>
+            
+            <div class="work-process">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Анализ потребностей</h3>
+                        <p>Проводим интервью с техническими лидерами, анализируем стек технологий и определяем цели обучения</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Разработка программы</h3>
+                        <p>Создаем индивидуальную учебную программу, подбираем преподавателей и формируем расписание</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Обучение команды</h3>
+                        <p>Проводим обучение с практическими заданиями, код-ревью и регулярными проверками прогресса</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Оценка результатов</h3>
+                        <p>Анализируем прогресс команды, предоставляем отчеты и рекомендации по дальнейшему развитию</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Кейсы компаний -->
+    <section class="section cases-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Кейсы наших клиентов</h2>
+                    <p class="section-subtitle">Реальные результаты компаний, которые уже работают с нами</p>
+                </div>
+                <div class="cases-nav">
+                    <button class="case-nav-btn prev-case">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="case-nav-btn next-case">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="cases-container">
+                <div class="cases-track" id="casesTrack">
+                    <!-- Кейсы будут добавляться через JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма для компаний -->
+    <section class="section form-section">
+        <div class="container">
+            <div class="form-card">
+                <div class="form-content">
+                    <h2>Обсудите обучение для вашей компании</h2>
+                    <p>Оставьте заявку и наш менеджер свяжется с вами в течение 2 часов для бесплатной консультации</p>
+                    
+                    <form id="companyForm" class="company-form">
+                        <div class="form-group">
+                            <input type="text" id="companyName" placeholder="Название компании" required>
+                            <label for="companyName">Компания</label>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="contactName" placeholder="Имя контактного лица" required>
+                                <label for="contactName">Контактное лицо</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+                                <label for="phone">Телефон</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="email@company.ru" required>
+                            <label for="email">E-mail</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="employeesCount" required>
+                                <option value="" disabled selected>Количество сотрудников для обучения</option>
+                                <option value="1-5">1-5 человек</option>
+                                <option value="6-20">6-20 человек</option>
+                                <option value="21-50">21-50 человек</option>
+                                <option value="51+">Более 50 человек</option>
+                            </select>
+                            <label for="employeesCount">Размер команды</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Расскажите о ваших задачах, технологиях и целях обучения..." rows="4"></textarea>
+                            <label for="message">Задача</label>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <div class="form-agreement">
+                                <input type="checkbox" id="agreement" required>
+                                <label for="agreement">
+                                    Согласен на обработку персональных данных
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                Отправить заявку <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-image">
+                    <div class="image-content">
+                        <h3>Что вы получите:</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Бесплатную консультацию</li>
+                            <li><i class="fas fa-check-circle"></i> Индивидуальный расчет</li>
+                            <li><i class="fas fa-check-circle"></i> Пробный урок для команды</li>
+                            <li><i class="fas fa-check-circle"></i> Гибкие условия оплаты</li>
+                        </ul>
+                        <div class="contact-info">
+                            <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                            <p><i class="fas fa-envelope"></i> corporate@codemaster.ru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ для компаний -->
+    <section class="section faq-section dark-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Частые вопросы от компаний</h2>
+                    <p class="section-subtitle">Ответы на самые популярные вопросы о корпоративном обучении</p>
+                </div>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Можно ли адаптировать программу под наши технологии?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, мы разрабатываем индивидуальные программы обучения с учетом используемого в вашей компании стека технологий, внутренних процессов и бизнес-задач. Преподаватели изучают ваш код и процессы перед началом обучения.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Как организовано обучение для распределенных команд?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Мы работаем с распределенными командами по всему миру. Обучение проходит онлайн в удобное для всех часовых поясов время. Используем интерактивные платформы, запись занятий и асинхронные форматы обучения.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Как оценивается эффективность обучения?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Мы предоставляем регулярные отчеты о прогрессе каждого сотрудника, результаты практических заданий и финальные проекты. После обучения проводим оценку навыков и даем рекомендации по дальнейшему развитию команды.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Есть ли скидки для крупных компаний?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, мы предоставляем корпоративные скидки в зависимости от количества обучающихся сотрудников и объема программы. Также возможна оплата в рассрочку и индивидуальные условия для долгосрочного сотрудничества.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-title">CodeMaster</h3>
+                    <p class="footer-description">Платформа для обучения программированию с нуля до профессионального уровня.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Направления</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Frontend-разработка</a></li>
+                        <li><a href="#">Backend-разработка</a></li>
+                        <li><a href="#">Мобильная разработка</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">DevOps</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Компания</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Курсы</a></li>
+                        <li><a href="teachers.html">Преподаватели</a></li>
+                        <li><a href="companies.html">Компаниям</a></li>
+                        <a href="blog.html" class="nav-link">Блог</a>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Поддержка</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Помощь студенту</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Документы</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 CodeMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="particles.js"></script>
+    <script src="companies.js"></script>
+</body>
+</html>

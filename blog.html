@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог | CodeMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <!-- Анимированный фон с эффектом "паутины" -->
+    <canvas id="webCanvas"></canvas>
+    <div class="blur-overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code logo-icon"></i>
+                CodeMaster
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Курсы</a>
+                <a href="teachers.html" class="nav-link">Преподаватели</a>
+                <a href="companies.html" class="nav-link">Компаниям</a>
+                <a href="blog.html" class="nav-link active">Блог</a>
+                <a href="#" class="nav-link">Карьера</a>
+            </nav>
+            
+            <div class="auth-buttons">
+                <button class="btn btn-secondary btn-sm">Войти</button>
+                <button class="btn btn-primary btn-sm">Начать учиться</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section для блога -->
+    <section class="blog-hero">
+        <div class="container hero-content animate-in">
+            <h1 class="hero-title">Блог CodeMaster</h1>
+            <p class="hero-subtitle">Актуальные статьи о программировании, карьере в IT и современных технологиях</p>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Поиск по статьям...">
+                    <button class="btn btn-primary btn-sm" id="searchBtn">Найти</button>
+                </div>
+                <div class="search-tags">
+                    <span class="tag-label">Популярные темы:</span>
+                    <a href="#javascript" class="search-tag">JavaScript</a>
+                    <a href="#career" class="search-tag">Карьера</a>
+                    <a href="#react" class="search-tag">React</a>
+                    <a href="#python" class="search-tag">Python</a>
+                    <a href="#interview" class="search-tag">Собеседования</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <section class="section blog-section">
+        <div class="container">
+            <div class="blog-layout">
+                <!-- Главные статьи -->
+                <div class="main-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Главные статьи</h2>
+                        <a href="#" class="btn btn-outline">Все статьи <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="featured-articles">
+                        <!-- Статьи будут добавляться через JavaScript -->
+                    </div>
+                    
+                    <!-- Категории статей -->
+                    <div class="section-header">
+                        <h2 class="section-title">Последние публикации</h2>
+                        <div class="category-filter">
+                            <select id="categoryFilter">
+                                <option value="all">Все категории</option>
+                                <option value="frontend">Frontend</option>
+                                <option value="backend">Backend</option>
+                                <option value="mobile">Mobile</option>
+                                <option value="devops">DevOps</option>
+                                <option value="career">Карьера</option>
+                                <option value="news">Новости</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="articles-grid" id="articlesGrid">
+                        <!-- Статьи будут добавляться через JavaScript -->
+                    </div>
+                    
+                    <div class="load-more-container">
+                        <button class="btn btn-outline" id="loadMoreArticles">
+                            <i class="fas fa-plus"></i> Загрузить еще статьи
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Сайдбар -->
+                <div class="sidebar">
+                    <!-- Авторы блога -->
+                    <div class="sidebar-widget authors-widget">
+                        <h3 class="widget-title">Авторы блога</h3>
+                        <div class="authors-list">
+                            <div class="author-card">
+                                <div class="author-avatar">
+                                    <img src="https://i.pravatar.cc/80?img=1" alt="Алексей Иванов">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Алексей Иванов</h4>
+                                    <p>Senior Frontend Developer</p>
+                                    <div class="author-stats">
+                                        <span><i class="fas fa-file-alt"></i> 24 статьи</span>
+                                        <span><i class="fas fa-heart"></i> 1.2к</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="author-card">
+                                <div class="author-avatar">
+                                    <img src="https://i.pravatar.cc/80?img=5" alt="Мария Петрова">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Мария Петрова</h4>
+                                    <p>Lead Backend Engineer</p>
+                                    <div class="author-stats">
+                                        <span><i class="fas fa-file-alt"></i> 18 статей</span>
+                                        <span><i class="fas fa-heart"></i> 980</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="author-card">
+                                <div class="author-avatar">
+                                    <img src="https://i.pravatar.cc/80?img=11" alt="Дмитрий Смирнов">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Дмитрий Смирнов</h4>
+                                    <p>CTO & Solution Architect</p>
+                                    <div class="author-stats">
+                                        <span><i class="fas fa-file-alt"></i> 32 статьи</span>
+                                        <span><i class="fas fa-heart"></i> 2.1к</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm btn-block">Все авторы</a>
+                    </div>
+                    
+                    <!-- Популярные статьи -->
+                    <div class="sidebar-widget popular-widget">
+                        <h3 class="widget-title">Популярные статьи</h3>
+                        <div class="popular-articles">
+                            <!-- Будет заполняться через JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Подписка -->
+                    <div class="sidebar-widget subscribe-widget">
+                        <h3 class="widget-title">Подписка на новости</h3>
+                        <p>Получайте лучшие статьи о программировании первыми</p>
+                        <div class="subscribe-form">
+                            <input type="email" placeholder="Ваш email">
+                            <button class="btn btn-primary btn-sm">Подписаться</button>
+                        </div>
+                        <p class="small-text">Подписываясь, вы соглашаетесь с политикой конфиденциальности</p>
+                    </div>
+                    
+                    <!-- Теги -->
+                    <div class="sidebar-widget tags-widget">
+                        <h3 class="widget-title">Теги</h3>
+                        <div class="tags-cloud">
+                            <a href="#" class="tag">JavaScript</a>
+                            <a href="#" class="tag">React</a>
+                            <a href="#" class="tag">Python</a>
+                            <a href="#" class="tag">TypeScript</a>
+                            <a href="#" class="tag">Node.js</a>
+                            <a href="#" class="tag">DevOps</a>
+                            <a href="#" class="tag">Карьера</a>
+                            <a href="#" class="tag">Интервью</a>
+                            <a href="#" class="tag">Алгоритмы</a>
+                            <a href="#" class="tag">Базы данных</a>
+                            <a href="#" class="tag">Microservices</a>
+                            <a href="#" class="tag">Docker</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Рассылка -->
+    <section class="section newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <h2>Еженедельная рассылка</h2>
+                    <p>Подпишитесь и получайте подборку лучших статей, новости индустрии и эксклюзивные материалы</p>
+                    <div class="newsletter-stats">
+                        <div class="stat">
+                            <span class="stat-value">15 000+</span>
+                            <span class="stat-label">подписчиков</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">4.8</span>
+                            <span class="stat-label">оценка рассылки</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Ваш email">
+                        <button class="btn btn-primary">Подписаться</button>
+                    </div>
+                    <p class="form-note">Отправляя форму, вы соглашаетесь на обработку персональных данных</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-title">CodeMaster</h3>
+                    <p class="footer-description">Платформа для обучения программированию с нуля до профессионального уровня.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Направления</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Frontend-разработка</a></li>
+                        <li><a href="#">Backend-разработка</a></li>
+                        <li><a href="#">Мобильная разработка</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">DevOps</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Компания</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Курсы</a></li>
+                        <li><a href="teachers.html">Преподаватели</a></li>
+                        <li><a href="companies.html">Компаниям</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Поддержка</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Помощь студенту</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Документы</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 CodeMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="particles.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>

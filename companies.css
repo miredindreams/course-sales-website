@@ -1,0 +1,614 @@
+/* Стили для страницы компаний */
+
+/* Hero секция для компаний */
+.companies-hero {
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+}
+
+.companies-hero .hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+/* Решения для компаний */
+.solutions-section {
+    padding-bottom: 60px;
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.solution-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 40px 30px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.solution-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.solution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent-primary);
+}
+
+.solution-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.solution-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.solution-card p {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.solution-features {
+    list-style: none;
+}
+
+.solution-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.solution-features i {
+    color: var(--accent-primary);
+    font-size: 0.9rem;
+}
+
+/* Процесс работы */
+.dark-section {
+    background: var(--bg-secondary);
+}
+
+.work-process {
+    max-width: 800px;
+    margin: 60px auto 0;
+    position: relative;
+}
+
+.work-process::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border-color);
+}
+
+.process-step {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.process-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.step-content {
+    flex: 1;
+    padding-top: 15px;
+}
+
+.step-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.step-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Кейсы компаний */
+.cases-section {
+    position: relative;
+}
+
+.cases-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.case-nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case-nav-btn:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: white;
+}
+
+.cases-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+    padding: 10px 0;
+}
+
+.cases-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease;
+}
+
+.case-card {
+    flex: 0 0 calc(33.333% - 20px);
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+}
+
+.case-header {
+    padding: 30px 30px 20px;
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, transparent 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.company-logo {
+    width: 80px;
+    height: 80px;
+    background: var(--bg-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--accent-primary);
+}
+
+.company-name {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: var(--text-primary);
+}
+
+.company-industry {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.company-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.company-stat {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+.case-body {
+    padding: 30px;
+}
+
+.case-challenge {
+    margin-bottom: 25px;
+}
+
+.case-challenge h4 {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.case-challenge p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.case-solution h4 {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.case-solution p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.case-results {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border-color);
+}
+
+.case-results h4 {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.results-list {
+    list-style: none;
+}
+
+.results-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.results-list i {
+    color: var(--success);
+}
+
+/* Форма для компаний */
+.form-section {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.form-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    display: flex;
+    min-height: 600px;
+    backdrop-filter: blur(10px);
+}
+
+.form-content {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.form-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.company-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 18px 20px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23cbd5e1' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 50px;
+}
+
+.form-group label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background: var(--bg-card);
+    padding: 0 10px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.form-agreement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-agreement input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-primary);
+}
+
+.form-agreement label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.form-image {
+    flex: 0 0 35%;
+    padding: 50px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-content {
+    color: var(--text-primary);
+}
+
+.image-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--text-primary);
+}
+
+.image-content ul {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.image-content li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.image-content i {
+    color: var(--success);
+    font-size: 1.2rem;
+}
+
+.contact-info {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.contact-info i {
+    color: var(--accent-primary);
+    width: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .form-card {
+        flex-direction: column;
+    }
+    
+    .form-image {
+        display: none;
+    }
+    
+    .case-card {
+        flex: 0 0 calc(50% - 15px);
+    }
+    
+    .work-process::before {
+        left: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .companies-hero {
+        padding: 140px 0 60px;
+    }
+    
+    .companies-hero .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-lg {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .form-content {
+        padding: 30px;
+    }
+    
+    .form-content h2 {
+        font-size: 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .form-footer {
+        flex-direction: column;
+        gap: 25px;
+        align-items: stretch;
+    }
+    
+    .case-card {
+        flex: 0 0 100%;
+    }
+    
+    .work-process::before {
+        display: none;
+    }
+    
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .step-number {
+        align-self: center;
+    }
+    
+    .cases-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .solution-card {
+        padding: 30px 20px;
+    }
+    
+    .form-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .company-form {
+        gap: 20px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 15px;
+    }
+}

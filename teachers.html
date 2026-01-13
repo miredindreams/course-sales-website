@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Преподаватели | CodeMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="teachers.css">
+</head>
+<body>
+    <!-- Анимированный фон с эффектом "паутины" -->
+    <canvas id="webCanvas"></canvas>
+    <div class="blur-overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code logo-icon"></i>
+                CodeMaster
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Курсы</a>
+                <a href="teachers.html" class="nav-link active">Преподаватели</a>
+                <a href="companies.html" class="nav-link">Компаниям</a>
+                <a href="blog.html" class="nav-link">Блог</a>
+                <a href="#" class="nav-link">Карьера</a>
+            </nav>
+            
+            <div class="auth-buttons">
+                <button class="btn btn-secondary btn-sm">Войти</button>
+                <button class="btn btn-primary btn-sm">Начать учиться</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section для преподавателей -->
+    <section class="teachers-hero">
+        <div class="container hero-content animate-in">
+            <h1 class="hero-title">Наши преподаватели</h1>
+            <p class="hero-subtitle">Профессионалы из ведущих IT-компаний с реальным опытом разработки</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">250+</span>
+                    <span class="stat-label">преподавателей</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">15+</span>
+                    <span class="stat-label">лет средний опыт</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">4.9</span>
+                    <span class="stat-label">средний рейтинг</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">98%</span>
+                    <span class="stat-label">удовлетворённых студентов</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Фильтры преподавателей -->
+    <section class="section filters-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Найдите своего ментора</h2>
+                    <p class="section-subtitle">Фильтруйте по специализации, опыту и компании</p>
+                </div>
+            </div>
+            
+            <div class="teachers-filters">
+                <div class="filter-group">
+                    <h3>Специализация</h3>
+                    <div class="filter-chips">
+                        <button class="filter-chip active" data-specialization="all">Все</button>
+                        <button class="filter-chip" data-specialization="frontend">Frontend</button>
+                        <button class="filter-chip" data-specialization="backend">Backend</button>
+                        <button class="filter-chip" data-specialization="fullstack">FullStack</button>
+                        <button class="filter-chip" data-specialization="mobile">Mobile</button>
+                        <button class="filter-chip" data-specialization="devops">DevOps</button>
+                        <button class="filter-chip" data-specialization="data">Data Science</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Уровень экспертизы</h3>
+                    <div class="filter-chips">
+                        <button class="filter-chip" data-level="all">Все</button>
+                        <button class="filter-chip active" data-level="senior">Senior+</button>
+                        <button class="filter-chip" data-level="lead">Tech Lead</button>
+                        <button class="filter-chip" data-level="cto">CTO/Architect</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Компания</h3>
+                    <div class="filter-chips">
+                        <button class="filter-chip active" data-company="all">Все</button>
+                        <button class="filter-chip" data-company="yandex">Yandex</button>
+                        <button class="filter-chip" data-company="vk">VK</button>
+                        <button class="filter-chip" data-company="tinkoff">Tinkoff</button>
+                        <button class="filter-chip" data-company="ozon">OZON</button>
+                        <button class="filter-chip" data-company="foreign">Зарубежные</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сетка преподавателей -->
+    <section class="section teachers-grid-section">
+        <div class="container">
+            <div class="teachers-grid" id="teachersGrid">
+                <!-- Преподаватели будут добавляться через JavaScript -->
+            </div>
+            
+            <div class="load-more-container">
+                <button class="btn btn-outline" id="loadMoreTeachers">
+                    <i class="fas fa-plus"></i> Показать еще преподавателей
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как проходят занятия -->
+    <section class="section process-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Как проходят занятия</h2>
+                    <p class="section-subtitle">Индивидуальный подход и постоянная поддержка</p>
+                </div>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Живые вебинары</h3>
+                    <p>Регулярные онлайн-встречи с разбором сложных тем и ответами на вопросы</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Практические задания</h3>
+                    <p>Реальные проекты и код-ревью от опытных разработчиков</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Личный ментор</h3>
+                    <p>Индивидуальные консультации и помощь в решении проблем</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Карьерная поддержка</h3>
+                    <p>Подготовка к собеседованиям и рекомендации для трудоустройства</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы о преподавателях -->
+    <section class="section reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Отзывы студентов</h2>
+                    <p class="section-subtitle">Что говорят о наших преподавателях</p>
+                </div>
+                <div class="reviews-nav">
+                    <button class="review-nav-btn prev-review">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="review-nav-btn next-review">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="reviews-container">
+                <div class="reviews-track" id="reviewsTrack">
+                    <!-- Отзывы будут добавляться через JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Стать преподавателем -->
+    <section class="section become-teacher-section">
+        <div class="container">
+            <div class="become-teacher-card">
+                <div class="become-teacher-content">
+                    <h2>Станьте преподавателем в CodeMaster</h2>
+                    <p>Делитесь опытом, растите профессионально и получайте достойное вознаграждение</p>
+                    <div class="teacher-benefits">
+                        <div class="benefit">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Конкурентная оплата</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-users"></i>
+                            <span>Сообщество профессионалов</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Карьерный рост</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Гибкий график</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg">
+                        Отправить заявку <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="become-teacher-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-title">CodeMaster</h3>
+                    <p class="footer-description">Платформа для обучения программированию с нуля до профессионального уровня.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Направления</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Frontend-разработка</a></li>
+                        <li><a href="#">Backend-разработка</a></li>
+                        <li><a href="#">Мобильная разработка</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">DevOps</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Компания</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Курсы</a></li>
+                        <li><a href="teachers.html">Преподаватели</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Поддержка</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Помощь студенту</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Документы</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 CodeMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно преподавателя -->
+    <div class="modal-overlay" id="teacherModal">
+        <div class="modal teacher-modal">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTeacherName"></h3>
+                <button class="modal-close" id="closeTeacherModal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalTeacherContent">
+                <!-- Контент будет заполняться через JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка "Наверх" -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="particles.js"></script>
+    <script src="teachers.js"></script>
+</body>
+</html>
