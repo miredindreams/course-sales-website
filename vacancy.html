@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Статья | CodeMaster Блог</title>
+    <title>Вакансия | CodeMaster Карьера</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="article.css">
+    <link rel="stylesheet" href="vacancy.css">
 </head>
 <body>
     <!-- Анимированный фон с эффектом "паутины" -->
@@ -28,8 +28,8 @@
                 <a href="index.html" class="nav-link">Курсы</a>
                 <a href="teachers.html" class="nav-link">Преподаватели</a>
                 <a href="companies.html" class="nav-link">Компаниям</a>
-                <a href="blog.html" class="nav-link active">Блог</a>
-                <a href="career.html" class="nav-link">Карьера</a>
+                <a href="blog.html" class="nav-link">Блог</a>
+                <a href="career.html" class="nav-link active">Карьера</a>
             </nav>
             
             <div class="auth-buttons">
@@ -39,109 +39,93 @@
         </div>
     </header>
 
-    <!-- Контент статьи -->
-    <main class="article-container">
-        <article class="article-content" id="articleContent">
-            <!-- Контент будет загружаться через JavaScript -->
-            <div class="article-loading">
-                <div class="loader"></div>
-                <p>Загрузка статьи...</p>
-            </div>
-        </article>
-        
-        <!-- Сайдбар статьи -->
-        <aside class="article-sidebar">
-            <!-- Навигация по статье -->
-            <div class="sidebar-widget table-of-contents">
-                <h3 class="widget-title">Содержание</h3>
-                <nav class="toc-nav" id="tableOfContents">
-                    <!-- Будет заполняться через JavaScript -->
-                </nav>
-            </div>
-            
-            <!-- Информация об авторе -->
-            <div class="sidebar-widget author-info-widget" id="authorInfo">
-                <!-- Будет заполняться через JavaScript -->
-            </div>
-            
-            <!-- Поделиться -->
-            <div class="sidebar-widget share-widget">
-                <h3 class="widget-title">Поделиться</h3>
-                <div class="share-buttons">
-                    <button class="share-btn vk">
-                        <i class="fab fa-vk"></i>
-                    </button>
-                    <button class="share-btn telegram">
-                        <i class="fab fa-telegram"></i>
-                    </button>
-                    <button class="share-btn twitter">
-                        <i class="fab fa-twitter"></i>
-                    </button>
-                    <button class="share-btn copy">
-                        <i class="fas fa-link"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Рекомендованные статьи -->
-            <div class="sidebar-widget recommended-widget">
-                <h3 class="widget-title">Читайте также</h3>
-                <div class="recommended-articles" id="recommendedArticles">
-                    <!-- Будет заполняться через JavaScript -->
-                </div>
-            </div>
-        </aside>
-    </main>
-
-    <!-- Комментарии -->
-    <section class="section comments-section">
+    <!-- Контент вакансии -->
+    <main class="vacancy-container">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" id="commentsCount">Комментарии (0)</h2>
-                <button class="btn btn-outline" id="addCommentBtn">
-                    <i class="fas fa-plus"></i> Добавить комментарий
-                </button>
+            <div class="vacancy-content" id="vacancyContent">
+                <!-- Контент будет загружаться через JavaScript -->
+                <div class="vacancy-loading">
+                    <div class="loader"></div>
+                    <p>Загрузка вакансии...</p>
+                </div>
             </div>
             
-            <!-- Форма комментария -->
-            <div class="comment-form-container" id="commentForm">
-                <div class="comment-form-header">
-                    <h3>Оставить комментарий</h3>
-                    <p>Поделитесь своим мнением или задайте вопрос</p>
-                </div>
-                <form id="newCommentForm">
-                    <div class="form-row">
+            <!-- Форма отклика -->
+            <div class="apply-sidebar">
+                <div class="apply-card">
+                    <h3>Откликнуться на вакансию</h3>
+                    <p>Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+                    
+                    <form id="vacancyForm" class="vacancy-form">
                         <div class="form-group">
-                            <input type="text" id="commentName" placeholder="Ваше имя" required>
+                            <input type="text" id="vacancyName" placeholder="Имя Фамилия" required>
                         </div>
+                        
                         <div class="form-group">
-                            <input type="email" id="commentEmail" placeholder="Ваш email" required>
+                            <input type="email" id="vacancyEmail" placeholder="email@example.com" required>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="commentText" placeholder="Ваш комментарий..." rows="4" required></textarea>
-                    </div>
-                    <div class="form-footer">
+                        
+                        <div class="form-group">
+                            <input type="tel" id="vacancyPhone" placeholder="+7 (___) ___-__-__" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="vacancyMessage" placeholder="Расскажите о своем опыте и почему вы подходите на эту позицию..." rows="4"></textarea>
+                        </div>
+                        
+                        <div class="form-group file-upload">
+                            <input type="file" id="vacancyResume" accept=".pdf,.doc,.docx" required>
+                            <label for="vacancyResume" class="upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Загрузите резюме</span>
+                            </label>
+                            <div class="file-info" id="vacancyFileInfo"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="vacancyLinks" placeholder="GitHub, LinkedIn, портфолио...">
+                        </div>
+                        
                         <div class="form-agreement">
-                            <input type="checkbox" id="commentAgreement" required>
-                            <label for="commentAgreement">
+                            <input type="checkbox" id="vacancyAgreement" required>
+                            <label for="vacancyAgreement">
                                 Согласен на обработку персональных данных
                             </label>
                         </div>
-                        <button type="submit" class="btn btn-primary">
-                            Отправить комментарий
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Отправить отклик
                         </button>
+                    </form>
+                    
+                    <div class="apply-info">
+                        <h4>Что дальше?</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Подтверждение получения отклика</li>
+                            <li><i class="fas fa-check"></i> Обратная связь в течение 3 дней</li>
+                            <li><i class="fas fa-check"></i> Приглашение на собеседование</li>
+                        </ul>
+                        
+                        <div class="hr-contact">
+                            <p><i class="fas fa-question-circle"></i> Вопросы?</p>
+                            <p><i class="fas fa-envelope"></i> hr@codemaster.ru</p>
+                        </div>
                     </div>
-                </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Похожие вакансии -->
+    <section class="section similar-vacancies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Похожие вакансии</h2>
+                <a href="career.html" class="btn btn-outline">Все вакансии</a>
             </div>
             
-            <!-- Список комментариев -->
-            <div class="comments-list" id="commentsList">
-                <!-- Комментарии будут добавляться через JavaScript -->
-                <div class="no-comments">
-                    <i class="far fa-comments"></i>
-                    <p>Пока нет комментариев. Будьте первым!</p>
-                </div>
+            <div class="vacancies-grid" id="similarVacancies">
+                <!-- Похожие вакансии будут добавляться через JavaScript -->
             </div>
         </div>
     </section>
@@ -179,7 +163,7 @@
                         <li><a href="teachers.html">Преподаватели</a></li>
                         <li><a href="companies.html">Компаниям</a></li>
                         <li><a href="blog.html">Блог</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li><a href="career.html">Карьера</a></li>
                     </ul>
                 </div>
                 
@@ -207,6 +191,6 @@
 
     <!-- Подключение скриптов -->
     <script src="particles.js"></script>
-    <script src="article.js"></script>
+    <script src="vacancy.js"></script>
 </body>
 </html>

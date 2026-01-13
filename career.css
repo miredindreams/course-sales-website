@@ -1,0 +1,928 @@
+/* Стили для страницы карьеры */
+
+/* Hero секция для карьеры */
+.career-hero {
+    padding: 160px 0 80px;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+}
+
+.career-hero .hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.career-hero .hero-buttons .btn {
+    min-width: 200px;
+}
+
+/* Преимущества работы */
+.why-us-section {
+    background: var(--bg-secondary);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-xl);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.benefit-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.benefit-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Вакансии */
+.vacancies-section {
+    position: relative;
+}
+
+.vacancy-filters {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.vacancy-filters select {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 10px 15px;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.95rem;
+    min-width: 180px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23cbd5e1' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+.vacancy-filters select:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+}
+
+.vacancies-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.vacancy-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.vacancy-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateX(5px);
+}
+
+.vacancy-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.vacancy-title h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.vacancy-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.vacancy-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.tag-department {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-primary);
+}
+
+.tag-experience {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.tag-location {
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--accent-secondary);
+}
+
+.tag-remote {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+}
+
+.vacancy-salary {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-left: auto;
+}
+
+.vacancy-body {
+    margin-bottom: 25px;
+}
+
+.vacancy-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.vacancy-requirements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.requirement-tag {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+}
+
+.vacancy-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    border-top: 1px solid var(--border-color);
+}
+
+.vacancy-date {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.vacancy-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-outline-sm {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+.no-vacancies {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.no-vacancies-content i {
+    font-size: 3rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.no-vacancies-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.no-vacancies-content p {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Стажировка */
+.internship-section {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.internship-program {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+    align-items: start;
+}
+
+.program-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.program-step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.step-content p {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.step-duration {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-primary);
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.internship-benefits h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: var(--text-primary);
+}
+
+.internship-benefits ul {
+    list-style: none;
+}
+
+.internship-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.internship-benefits i {
+    color: var(--success);
+    font-size: 1.1rem;
+}
+
+/* Истории успеха */
+.success-stories {
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+    padding: 10px 0;
+}
+
+.stories-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease;
+}
+
+.story-card {
+    flex: 0 0 calc(33.333% - 20px);
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 40px 30px;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    position: relative;
+}
+
+.story-card::before {
+    content: '"';
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 4rem;
+    color: var(--accent-primary);
+    opacity: 0.2;
+    font-family: serif;
+    line-height: 1;
+}
+
+.story-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-primary);
+    overflow: hidden;
+    margin: 0 auto 25px;
+}
+
+.story-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-content {
+    margin-bottom: 25px;
+}
+
+.story-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.story-author h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--text-primary);
+}
+
+.story-author p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.story-career {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.career-path {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.career-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+.step-year {
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.step-position {
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.career-arrow {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.stories-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.story-nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-nav-btn:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: white;
+}
+
+/* Процесс найма */
+.hiring-process {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 30px 25px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.process-step:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-5px);
+}
+
+.process-step .step-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.process-step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.process-step p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.step-time {
+    display: inline-block;
+    padding: 6px 15px;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-primary);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Форма заявки */
+.apply-section {
+    background: var(--bg-secondary);
+}
+
+.apply-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+    backdrop-filter: blur(10px);
+}
+
+.apply-content {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.apply-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.apply-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.career-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.career-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.career-form .form-group {
+    position: relative;
+}
+
+.career-form .form-group input,
+.career-form .form-group select,
+.career-form .form-group textarea {
+    width: 100%;
+    padding: 18px 20px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.career-form .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.career-form .form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23cbd5e1' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 50px;
+}
+
+.career-form .form-group label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background: var(--bg-card);
+    padding: 0 10px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.career-form .form-group input:focus,
+.career-form .form-group select:focus,
+.career-form .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.file-upload {
+    position: relative;
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.upload-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: var(--bg-secondary);
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    justify-content: center;
+}
+
+.upload-label:hover {
+    border-color: var(--accent-primary);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.upload-label i {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+}
+
+.upload-label span {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.file-info {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    padding: 10px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.form-agreement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-agreement input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-primary);
+}
+
+.form-agreement label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.apply-info {
+    padding: 50px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.apply-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+}
+
+.info-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.info-step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.info-step .step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+}
+
+.info-step .step-desc h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.info-step .step-desc p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.contact-hr {
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.contact-hr h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.contact-hr p {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+.contact-hr i {
+    color: var(--accent-primary);
+    width: 20px;
+}
+
+/* FAQ */
+.faq-section .faq-container {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .internship-program {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .story-card {
+        flex: 0 0 calc(50% - 15px);
+    }
+}
+
+@media (max-width: 992px) {
+    .apply-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .apply-info {
+        display: none;
+    }
+    
+    .hiring-process {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .career-hero {
+        padding: 140px 0 60px;
+    }
+    
+    .career-hero .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .vacancy-filters {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .vacancy-filters select {
+        width: 100%;
+    }
+    
+    .vacancy-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .vacancy-salary {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .vacancy-footer {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .vacancy-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .story-card {
+        flex: 0 0 100%;
+    }
+    
+    .stories-nav {
+        display: none;
+    }
+    
+    .hiring-process {
+        grid-template-columns: 1fr;
+    }
+    
+    .career-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .form-footer {
+        flex-direction: column;
+        gap: 25px;
+        align-items: stretch;
+    }
+    
+    .apply-content {
+        padding: 30px;
+    }
+    
+    .apply-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefit-card {
+        padding: 25px 20px;
+    }
+    
+    .vacancy-card {
+        padding: 25px 20px;
+    }
+    
+    .career-form {
+        gap: 20px;
+    }
+    
+    .career-form .form-group input,
+    .career-form .form-group select,
+    .career-form .form-group textarea {
+        padding: 15px;
+    }
+}

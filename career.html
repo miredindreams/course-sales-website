@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карьера | CodeMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="career.css">
+</head>
+<body>
+    <!-- Анимированный фон с эффектом "паутины" -->
+    <canvas id="webCanvas"></canvas>
+    <div class="blur-overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-code logo-icon"></i>
+                CodeMaster
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Курсы</a>
+                <a href="teachers.html" class="nav-link">Преподаватели</a>
+                <a href="companies.html" class="nav-link">Компаниям</a>
+                <a href="blog.html" class="nav-link">Блог</a>
+                <a href="career.html" class="nav-link active">Карьера</a>
+            </nav>
+            
+            <div class="auth-buttons">
+                <button class="btn btn-secondary btn-sm">Войти</button>
+                <button class="btn btn-primary btn-sm">Начать учиться</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section для карьеры -->
+    <section class="career-hero">
+        <div class="container hero-content animate-in">
+            <h1 class="hero-title">Начни карьеру в CodeMaster</h1>
+            <p class="hero-subtitle">Присоединяйся к команде, которая меняет образование в IT</p>
+            
+            <div class="hero-buttons">
+                <a href="#vacancies" class="btn btn-primary btn-lg">Смотреть вакансии</a>
+                <a href="#internship" class="btn btn-secondary btn-lg">Стажировка</a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">120+</span>
+                    <span class="stat-label">сотрудников</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">85%</span>
+                    <span class="stat-label">remote-first</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">4.6</span>
+                    <span class="stat-label">оценка работодателя</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">16</span>
+                    <span class="stat-label">стран команды</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Почему мы -->
+    <section class="section why-us-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Почему выбирают CodeMaster</h2>
+                    <p class="section-subtitle">Работа, которая вдохновляет и развивает</p>
+                </div>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Быстрый рост</h3>
+                    <p>Ежегодные ревью, индивидуальные планы развития и поддержка в профессиональном росте</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Работа из любой точки</h3>
+                    <p>Remote-first подход, гибкий график и возможность работать из любой страны</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Обучение за счет компании</h3>
+                    <p>Бюджет на обучение, конференции и профессиональные сертификации</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Забота о здоровье</h3>
+                    <p>ДМС, спортивная компенсация, психологическая поддержка и wellness программы</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Сильное комьюнити</h3>
+                    <p>Регулярные митапы, нетворкинг и обмен знаниями внутри компании</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Прозрачная карьера</h3>
+                    <p>Четкие грейды, понятные критерии роста и справедливая система оценки</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Вакансии -->
+    <section class="section vacancies-section" id="vacancies">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Открытые вакансии</h2>
+                    <p class="section-subtitle">Найди свою идеальную позицию в нашей команде</p>
+                </div>
+                <div class="vacancy-filters">
+                    <select id="departmentFilter">
+                        <option value="all">Все отделы</option>
+                        <option value="tech">Технический</option>
+                        <option value="education">Образовательный</option>
+                        <option value="product">Продуктовый</option>
+                        <option value="marketing">Маркетинг</option>
+                        <option value="sales">Продажи</option>
+                        <option value="support">Поддержка</option>
+                    </select>
+                    <select id="experienceFilter">
+                        <option value="all">Любой опыт</option>
+                        <option value="intern">Стажер</option>
+                        <option value="junior">Junior</option>
+                        <option value="middle">Middle</option>
+                        <option value="senior">Senior</option>
+                        <option value="lead">Lead</option>
+                    </select>
+                    <select id="locationFilter">
+                        <option value="all">Локация</option>
+                        <option value="remote">Удаленно</option>
+                        <option value="moscow">Москва</option>
+                        <option value="spb">Санкт-Петербург</option>
+                        <option value="other">Другие города</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="vacancies-list" id="vacanciesList">
+                <!-- Вакансии будут добавляться через JavaScript -->
+            </div>
+            
+            <div class="no-vacancies" id="noVacancies" style="display: none;">
+                <div class="no-vacancies-content">
+                    <i class="fas fa-search"></i>
+                    <h3>Подходящих вакансий не найдено</h3>
+                    <p>Попробуйте изменить параметры фильтра или подпишитесь на уведомления о новых вакансиях</p>
+                    <button class="btn btn-outline" id="subscribeVacancies">
+                        <i class="fas fa-bell"></i> Подписаться на вакансии
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Стажировка -->
+    <section class="section internship-section dark-section" id="internship">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Стажировка для начинающих</h2>
+                    <p class="section-subtitle">Первый шаг в карьере IT-специалиста</p>
+                </div>
+                <a href="#applyInternship" class="btn btn-outline">Подать заявку</a>
+            </div>
+            
+            <div class="internship-program">
+                <div class="program-card">
+                    <div class="program-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Отбор участников</h3>
+                            <p>Тестовое задание и собеседование с тимлидом</p>
+                            <span class="step-duration">1-2 недели</span>
+                        </div>
+                    </div>
+                    
+                    <div class="program-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Обучение и введение</h3>
+                            <p>Ознакомление с проектами, обучение технологиям компании</p>
+                            <span class="step-duration">2 недели</span>
+                        </div>
+                    </div>
+                    
+                    <div class="program-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Работа в команде</h3>
+                            <p>Работа над реальными задачами под руководством ментора</p>
+                            <span class="step-duration">1-3 месяца</span>
+                        </div>
+                    </div>
+                    
+                    <div class="program-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Трудоустройство</h3>
+                            <p>Предложение о постоянной работе для успешных стажеров</p>
+                            <span class="step-duration">90% стажеров</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="internship-benefits">
+                    <h3>Что получают стажеры:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Опыт работы в реальных проектах</li>
+                        <li><i class="fas fa-check-circle"></i> Персонального ментора из команды</li>
+                        <li><i class="fas fa-check-circle"></i> Обратную связь и code review</li>
+                        <li><i class="fas fa-check-circle"></i> Стипендию во время стажировки</li>
+                        <li><i class="fas fa-check-circle"></i> Сертификат о прохождении стажировки</li>
+                        <li><i class="fas fa-check-circle"></i> Приоритет при трудоустройстве</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- История успеха -->
+    <section class="section success-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Истории успеха</h2>
+                    <p class="section-subtitle">Как наши сотрудники строили карьеру в CodeMaster</p>
+                </div>
+                <div class="stories-nav">
+                    <button class="story-nav-btn prev-story">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="story-nav-btn next-story">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="success-stories">
+                <div class="stories-track" id="storiesTrack">
+                    <!-- Истории будут добавляться через JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Процесс отбора -->
+    <section class="section process-section dark-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Процесс отбора</h2>
+                    <p class="section-subtitle">Понятные этапы от резюме до оффера</p>
+                </div>
+            </div>
+            
+            <div class="hiring-process">
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Резюме</h3>
+                    <p>Отправьте резюме через форму или Linkedin</p>
+                    <span class="step-time">1-3 дня</span>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Тестовое задание</h3>
+                    <p>Практическая задача на 4-8 часов</p>
+                    <span class="step-time">3-5 дней</span>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Техническое интервью</h3>
+                    <p>Собеседование с будущим руководителем</p>
+                    <span class="step-time">1-2 часа</span>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Культурное интервью</h3>
+                    <p>Знакомство с командой и ценностями</p>
+                    <span class="step-time">1 час</span>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Оффер</h3>
+                    <p>Обсуждение условий и подписание</p>
+                    <span class="step-time">1-3 дня</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма заявки -->
+    <section class="section apply-section" id="applyInternship">
+        <div class="container">
+            <div class="apply-card">
+                <div class="apply-content">
+                    <h2>Готовы начать карьеру в CodeMaster?</h2>
+                    <p>Отправьте свое резюме, и мы свяжемся с вами в ближайшее время</p>
+                    
+                    <form id="careerForm" class="career-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="fullName" placeholder="Имя Фамилия" required>
+                                <label for="fullName">ФИО</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="careerEmail" placeholder="email@example.com" required>
+                                <label for="careerEmail">E-mail</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" id="careerPhone" placeholder="+7 (___) ___-__-__" required>
+                                <label for="careerPhone">Телефон</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <select id="positionType" required>
+                                    <option value="" disabled selected>Тип позиции</option>
+                                    <option value="fulltime">Полная занятость</option>
+                                    <option value="parttime">Частичная занятость</option>
+                                    <option value="internship">Стажировка</option>
+                                    <option value="remote">Удаленная работа</option>
+                                </select>
+                                <label for="positionType">Тип работы</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="vacancySelect">
+                                <option value="" selected>Выберите вакансию (опционально)</option>
+                                <!-- Вакансии будут добавляться через JavaScript -->
+                            </select>
+                            <label for="vacancySelect">Интересующая вакансия</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="coverLetter" placeholder="Расскажите о своем опыте, навыках и почему хотите работать в CodeMaster..." rows="4"></textarea>
+                            <label for="coverLetter">Сопроводительное письмо</label>
+                        </div>
+                        
+                        <div class="form-group file-upload">
+                            <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx" required>
+                            <label for="resumeUpload" class="upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Загрузите резюме (PDF, DOC, DOCX)</span>
+                            </label>
+                            <div class="file-info" id="fileInfo"></div>
+                        </div>
+                        
+                        <div class="form-group links-upload">
+                            <input type="text" id="portfolioLink" placeholder="Ссылка на портфолио, GitHub, LinkedIn...">
+                            <label for="portfolioLink">Ссылки (опционально)</label>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <div class="form-agreement">
+                                <input type="checkbox" id="careerAgreement" required>
+                                <label for="careerAgreement">
+                                    Согласен на обработку персональных данных
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                Отправить заявку <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="apply-info">
+                    <h3>Что дальше?</h3>
+                    <div class="info-steps">
+                        <div class="info-step">
+                            <div class="step-number">1</div>
+                            <div class="step-desc">
+                                <h4>Подтверждение</h4>
+                                <p>Мы подтвердим получение заявки в течение 24 часов</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-step">
+                            <div class="step-number">2</div>
+                            <div class="step-desc">
+                                <h4>Обратная связь</h4>
+                                <p>HR-менеджер свяжется с вами в течение 3 рабочих дней</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-step">
+                            <div class="step-number">3</div>
+                            <div class="step-desc">
+                                <h4>Следующие шаги</h4>
+                                <p>В зависимости от вакансии пригласим на интервью или тестовое</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-hr">
+                        <h4>Вопросы по вакансиям?</h4>
+                        <p><i class="fas fa-envelope"></i> hr@codemaster.ru</p>
+                        <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Частые вопросы о карьере</h2>
+                    <p class="section-subtitle">Ответы на популярные вопросы кандидатов</p>
+                </div>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Какие технологии используются в компании?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Мы используем современный стек: React/TypeScript для фронтенда, Node.js/Python/Go для бэкенда, PostgreSQL/MongoDB для баз данных, Docker/Kubernetes для инфраструктуры. Каждая команда может выбирать оптимальные технологии для своих задач.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Есть ли возможность удаленной работы?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, мы remote-first компания. 85% сотрудников работают удаленно из разных стран. Для всех позиций доступна удаленная работа, кроме редких случаев, когда требуется присутствие в офисе.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Как проходит адаптация новых сотрудников?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>У нас есть система адаптации: персональный buddy из команды, план на первые 90 дней, регулярные check-in встречи с менеджером. Первый месяц фокусируемся на знакомстве с командой и процессами.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Какие есть возможности для роста?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ежегодные performance review, индивидуальный план развития, бюджет на обучение (конференции, курсы, сертификации), внутренние митапы и возможность менять команды/проекты внутри компании.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-title">CodeMaster</h3>
+                    <p class="footer-description">Платформа для обучения программированию с нуля до профессионального уровня.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Направления</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Frontend-разработка</a></li>
+                        <li><a href="#">Backend-разработка</a></li>
+                        <li><a href="#">Мобильная разработка</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">DevOps</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Компания</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Курсы</a></li>
+                        <li><a href="teachers.html">Преподаватели</a></li>
+                        <li><a href="companies.html">Компаниям</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="career.html">Карьера</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Поддержка</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Помощь студенту</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Документы</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 CodeMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="particles.js"></script>
+    <script src="career.js"></script>
+</body>
+</html>
